@@ -11,10 +11,10 @@ public class StockExchangeDB {
     public void connecting() {
         try {
             Class.forName(DB_Driver); //Проверяем наличие JDBC драйвера для работы с БД
-            Connection connection = DriverManager.getConnection(DB_URL, "postgres","2984" );//соединениесБД
+            Connection connection = DriverManager.getConnection(DB_URL, "postgres","2984" ); //соединениесБД
 
             System.out.println("Соединение с СУБД выполнено.");
-            connection.close();       // отключение от БД
+            connection.close(); // отключение от БД
             System.out.println("Отключение от СУБД выполнено.");
         } catch (ClassNotFoundException e) {
             e.printStackTrace(); // обработка ошибки  Class.forName
