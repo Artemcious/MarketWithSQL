@@ -3,6 +3,8 @@ package market;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
+import static manage.ManagementMarket.ID;
+
 public class Stock {
 
     String name;
@@ -13,8 +15,7 @@ public class Stock {
     LocalDateTime operDate;
     Stock share;
     BigDecimal rate;
-    public long idPrep = 0;
-    public long idNow = idPrep;
+    long id;
 
     public Stock(String name, BigDecimal startPrice, int changeProbability, int delta) {
         operDate = LocalDateTime.now();
@@ -24,12 +25,19 @@ public class Stock {
         this.changeProbability = changeProbability;
         this.delta = delta;
 
-        idPrep++;
-        idNow = idPrep;
+        ID++;
+        id = ID;
+
+
 
     }
 
     public BigDecimal getRate() {
         return rate;
     }
+
+    public long getId() {
+        return id;
+    }
+
 }

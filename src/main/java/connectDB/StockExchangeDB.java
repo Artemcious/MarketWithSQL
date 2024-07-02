@@ -2,8 +2,6 @@ package connectDB;
 
 import java.sql.*;
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class StockExchangeDB {
 
     public static final String DB_URL = "jdbc:postgresql://localhost:5432/postgres";
