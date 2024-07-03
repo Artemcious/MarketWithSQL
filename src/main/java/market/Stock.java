@@ -1,11 +1,11 @@
 package market;
 
+import model.MarketModel;
+
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
-import static manage.ManagementMarket.ID;
-
-public class Stock {
+public class Stock extends MarketModel {
 
     String name;
     BigDecimal startPrice;
@@ -15,7 +15,7 @@ public class Stock {
     LocalDateTime operDate;
     Stock share;
     BigDecimal rate;
-    long id;
+
 
     public Stock(String name, BigDecimal startPrice, int changeProbability, int delta) {
         operDate = LocalDateTime.now();
@@ -25,19 +25,65 @@ public class Stock {
         this.changeProbability = changeProbability;
         this.delta = delta;
 
-        ID++;
-        id = ID;
 
 
 
+
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public BigDecimal getStartPrice() {
+        return startPrice;
+    }
+
+    public void setStartPrice(BigDecimal startPrice) {
+        this.startPrice = startPrice;
+    }
+
+    public int getChangeProbability() {
+        return changeProbability;
+    }
+
+    public void setChangeProbability(int changeProbability) {
+        this.changeProbability = changeProbability;
+    }
+
+    public int getDelta() {
+        return delta;
+    }
+
+    public void setDelta(int delta) {
+        this.delta = delta;
+    }
+
+    public LocalDateTime getOperDate() {
+        return operDate;
+    }
+
+    public void setOperDate(LocalDateTime operDate) {
+        this.operDate = operDate;
+    }
+
+    public Stock getShare() {
+        return share;
+    }
+
+    public void setShare(Stock share) {
+        this.share = share;
     }
 
     public BigDecimal getRate() {
         return rate;
     }
 
-    public long getId() {
-        return id;
+    public void setRate(BigDecimal rate) {
+        this.rate = rate;
     }
-
 }

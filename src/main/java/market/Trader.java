@@ -1,8 +1,10 @@
 package market;
 
+import model.MarketModel;
+
 import java.math.BigDecimal;
 
-public class Trader {
+public class Trader extends MarketModel {
 
     Stock name;
     int sfreqTick;
