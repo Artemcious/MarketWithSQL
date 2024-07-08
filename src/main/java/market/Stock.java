@@ -1,13 +1,11 @@
 package market;
 
 import model.MarketModel;
-import repository.TableOperations;
 
 import java.math.BigDecimal;
-import java.sql.SQLException;
 import java.time.LocalDateTime;
 
-public class Stock extends MarketModel implements TableOperations {
+public class Stock extends MarketModel  {
 
     String name;
     BigDecimal startPrice;
@@ -89,18 +87,4 @@ public class Stock extends MarketModel implements TableOperations {
         this.rate = rate;
     }
 
-    @Override
-    public void createTable() throws SQLException {
-
-    }
-
-    @Override
-    public void createForeignKeys() throws SQLException {
-
-    }
-
-    @Override
-    public void createExtraConstraints() throws SQLException {
-
-    }
 }

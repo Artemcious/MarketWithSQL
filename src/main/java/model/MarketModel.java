@@ -31,4 +31,6 @@ public class MarketModel {
     public int hashCode() {
         return Objects.hash(id);
     }
+
+
 }
