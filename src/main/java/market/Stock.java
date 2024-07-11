@@ -28,7 +28,7 @@ public class Stock extends MarketModel  {
 
     }
 
-    public Stock(String name, BigDecimal startPrice, int changeProbability, int delta) {
+    public Stock(String name, BigDecimal startPrice, int changeProbability, int delta, BigDecimal rate) {
         super();
         operDate = LocalDateTime.now();
 
@@ -36,7 +36,7 @@ public class Stock extends MarketModel  {
         this.startPrice = startPrice;
         this.changeProbability = changeProbability;
         this.delta = delta;
-
+        this.rate = rate;
 
 
 

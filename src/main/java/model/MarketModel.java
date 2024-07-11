@@ -3,7 +3,7 @@ package model;
 import java.util.Objects;
 
 public class MarketModel {
-    protected long id;
+    protected static long id;
 
     public long getId() {
         return id;

@@ -17,7 +17,6 @@ public class Trader extends MarketModel {
     Trader trader;
     BigDecimal shareRate;
     long amount;
-    long id;
 
     public Trader() {
 

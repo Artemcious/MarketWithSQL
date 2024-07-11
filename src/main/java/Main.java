@@ -9,9 +9,10 @@ public class Main {
 
     public static void main(String[] args) throws SQLException {
 
-        DataManager manager = new DataManager();
-        Connection connection = Objects.requireNonNull(LinkDB.connecting());
-        manager.createTable(manager.createStatement(connection));
+        Connection connection = LinkDB.connecting();
+        DataManager manager = new DataManager(connection);
+        manager.createTable(manager.getStatement());
+        manager.insertValues(manager.getStatement());
         LinkDB.closeConnecting(connection);
     }
 }
