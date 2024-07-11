@@ -11,7 +11,7 @@ public class Main {
 
         DataManager manager = new DataManager();
         Connection connection = Objects.requireNonNull(LinkDB.connecting());
-        manager.createStatement(connection);
+        manager.createTable(manager.createStatement(connection));
         LinkDB.closeConnecting(connection);
     }
 }

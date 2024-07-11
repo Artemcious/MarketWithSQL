@@ -1,5 +1,6 @@
 package service;
 
+import market.Stock;
 import repository.TableOperations;
 
 import java.sql.Connection;
@@ -8,7 +9,7 @@ import java.sql.Statement;
 
 public class DataManager implements TableOperations {
 
-    String sqlRequest =
+    String sqlRequestCreateTable =
             "DROP TABLE \"Market\"" +
             "CREATE TABLE \"Market\"" +
                     " \"name\" varchar(255)," +
@@ -16,10 +17,11 @@ public class DataManager implements TableOperations {
                     "  \"changeProbality\" integer," +
                     "  \"delta\" integer," +
                     "  \"operDate\" timestamp," +
-                    "  \"share\" varchar(255)," +
                     "  \"rate\" decimal," +
                     "  \"id\" bigint"
             ;
+
+    String sqlRequestInsertValues;
 
 
     public Statement createStatement(Connection connection) throws SQLException {
@@ -30,7 +32,7 @@ public class DataManager implements TableOperations {
 
     @Override
     public void createTable(Statement statement) throws SQLException {
-        statement.execute(sqlRequest);
+        statement.execute(sqlRequestCreateTable);
 
     }
 

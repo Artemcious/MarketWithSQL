@@ -4,7 +4,7 @@ import java.sql.*;
 
 public class LinkDB {
 
-    public static final String DB_URL = "jdbc:postgresql://localhost:5432/postgres";
+    public static final String DB_URL = "jdbc:postgresql://localhost:5432/Market";
     public static final String DB_Driver = "org.postgresql.Driver";
 
         public static Connection connecting() {

@@ -13,10 +13,8 @@ public class MarketModel {
         this.id = id;
     }
 
-    public MarketModel() {}
-
-    public MarketModel(long id) {
-        this.id = id;
+    public MarketModel() {
+        id++;
     }
 
     @Override

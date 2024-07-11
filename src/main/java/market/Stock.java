@@ -13,11 +13,23 @@ public class Stock extends MarketModel  {
     int delta;
 
     LocalDateTime operDate;
-    Stock share;
     BigDecimal rate;
 
 
+    public Stock() {
+        super();
+        operDate = LocalDateTime.now();
+
+        name = "default promo";
+        startPrice = BigDecimal.valueOf(10.0);
+        changeProbability = 0;
+        delta = 1;
+        rate = BigDecimal.valueOf(1.0);
+
+    }
+
     public Stock(String name, BigDecimal startPrice, int changeProbability, int delta) {
+        super();
         operDate = LocalDateTime.now();
 
         this.name = name;
@@ -69,14 +81,6 @@ public class Stock extends MarketModel  {
 
     public void setOperDate(LocalDateTime operDate) {
         this.operDate = operDate;
-    }
-
-    public Stock getShare() {
-        return share;
-    }
-
-    public void setShare(Stock share) {
-        this.share = share;
     }
 
     public BigDecimal getRate() {
